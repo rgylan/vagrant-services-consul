@@ -83,7 +83,7 @@ find . -mindepth 1 -maxdepth 1 -type d -execdir bash -c "$CMDS" \; >/dev/null 2>
 # Run services
 echo "[TASK 15] Run services"
 JAVA_OPTS="-Xms512m -Xmx512m -XX:+UseG1GC"
-CMDS="cd '{}/build/libs' && chmod 755 *.jar && java -Dprofile=eureka $JAVA_OPTS -jar *.jar &"
+CMDS="cd '{}/build/libs' && chmod 755 *.jar && java -Dprofile=consul $JAVA_OPTS -jar *.jar &"
 # Run eureka first.
 cd atm-eureka-service/build/libs
 chmod 755 atm-eureka-service-1.0-SNAPSHOT.jar
