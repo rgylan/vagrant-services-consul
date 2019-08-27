@@ -3,7 +3,9 @@
 # Update hosts file
 echo "[TASK 1] Update /etc/hosts file"
 cat >>/etc/hosts<<EOF
-172.42.42.101 cnslservices.example.com docker
+172.42.42.101 consul.server.com consulsvr
+172.42.42.102 client1.example.com client1
+172.42.42.103 consul.services.com consulsvc
 EOF
 
 # Install OpenJDK 11
